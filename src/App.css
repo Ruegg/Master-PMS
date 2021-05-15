@@ -2,15 +2,67 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,body {
+  background-color: #F4F8FF;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width: 1300px) {
+  .nav {
+    flex-direction: column;
   }
+}
+
+@media only screen and (max-width: 1024px) {
+  .navbar-a {
+    flex-direction: column;
+    padding: 0 !important;
+  }
+
+  .nav {
+    width: 100% !important;
+  }
+
+  a {
+    border-bottom: 1px solid #EFEFEF;
+    padding: 0.6em;;
+    box-sizing: border-box;
+    font-size: 0.8em;
+    text-align: center;
+  }
+
+  .collapse-mobile {
+    display: block !important;
+  }
+
+  .hide-refs {
+    display: none !important;
+  }
+}
+
+.hide-refs {
+  display: block;
+}
+
+.mobile-preview {
+  width: 400px;
+  position: absolute;
+  right: calc(50% - 200px);
+  top: 40%;
+  user-select: none;
+}
+
+.collapse-mobile {
+  top: 4px;
+  right: 4px;
+  position: absolute;
+  margin: 1em;
+  background-color: rgba(0,0,0,0.1);
+  width: 1.4em;
+  border: none;
+  color: #508FF4;
+  font-size: 1.4em;
+  display: none;
+  cursor: pointer;
 }
 
 .App-header {
@@ -24,15 +76,207 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.intro-title {
+  font-size: 2em;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  color: #5a5a5a;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.intro-niche {
+  font-size: 1.4em;
+  color: #707070;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  padding: 2em;
+}
+
+.niche {
+  color: #508FF4;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.logo {
+  font-size: 1.4em;
+  min-width: 10%;
+  padding: 1em;
+  color: #508FF4;
+  font-weight: 600;
+  white-space: pre;
+  cursor: pointer;
+}
+
+.navbar-a {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  float: right;
+  padding: 1em;
+}
+
+.navbar-a a {
+  text-decoration: none;
+  font-size: 1em;
+  color: #508FF4;
+}
+
+.content {
+  max-width: 1024px;
+  height: 100%;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+  padding: 1em;
+  margin-top: 1em;
+  border-radius: 4px;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-title {
+  font-family: 'Open Sans', sans-serif;
+  color: #5a5a5a;
+  text-align: center;
+  font-weight: 600;
+}
+
+.content p {
+  color: #636363;
+}
+
+.smart-table {
+  width: calc(100% - 2em);
+  margin-left: 1em;
+  margin-right: 1em;
+  font-family: 'Open Sans', sans-serif;
+  border-collapse: collapse;
+}
+
+.smart-headers {
+  border-top: 1px solid #EFEFEF;
+  border-bottom: 1px solid #EFEFEF;
+  font-size: 12px;
+}
+
+.smart-table tr {
+  height: 50px;
+  font-size: 12px;
+  color: #707070;
+}
+
+.smart-headers td {
+  font-weight: 600;
+  color: #707070;
+  cursor: pointer;
+  user-select: none;
+}
+
+.view-btn {
+  background-color: #EEF5FF;
+  color: #1170FF;
+  font-weight: 600;
+  padding: 4px 8px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.sorting-header {
+  color: #1170FF !important;
+}
+
+.edit-btn,.delete-btn {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #EEF5FF;
+  color: #1170FF;
+  font-weight: 600;
+  padding: 4px 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  border-radius: none;
+  border: none;
+  margin: 1em;
+  cursor: pointer;
+}
+
+.edit-btn {
+  color: #227AFF;
+  background-color: #D2E4FF;
+}
+
+.delete-btn {
+  color: #FF0000;
+  background-color: #FFD2D2;
+}
+
+.right-btn {
+  margin-left: auto;
+  margin-right: 1em;
+  margin-top: 2em;
+  display: block;
+}
+
+.form-label {
+  font-size: 11px;
+  color: #508FF4;
+  font-family: 'Open Sans', sans-serif;
+  display: block;
+  margin-bottom: 8px;
+  margin-top: 16px;
+}
+.form-in {
+  background-color: #F0F2F7;
+  font-family: 'Open Sans', sans-serif;
+  border: none;
+  border-radius: 2px;
+  font-size: 1.2em;
+  box-shadow: 0 1px 0 rgb(0 0 0 / 3%) inset;
+  padding: 8px;
+  color: #8a97a0;
+  width: 80%;
+  max-width: 400px;
+}
+
+.form-in:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.react-datepicker__header {
+  background-color: #F0F2F7 !important;
+  color: #8a97a0 !important;
+}
+
+.react-datepicker {
+  font-family: 'Open Sans', sans-serif !important;
+  border-radius: 4px !important;
+  border: none !important;
+  box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+}
+
+.react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header {
+  color: #8a97a0 !important;
+  font-weight: 600 !important;
+}
+
+.react-datepicker__day--keyboard-selected, .react-datepicker__month-text--keyboard-selected, .react-datepicker__quarter-text--keyboard-selected, .react-datepicker__year-text--keyboard-selected {
+  background-color: #508FF4 !important;
+  border-radius: 0.2rem !important;
+}
+
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::before {
+  top: 0px !important;
 }
